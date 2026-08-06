@@ -1,0 +1,6 @@
+.git
+.github
+dist
+coverage.out
+l402test.yaml
+*.fixture.json

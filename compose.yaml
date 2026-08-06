@@ -1,0 +1,21 @@
+services:
+  l402test:
+    build: .
+    # Map this development container to the host user so the bind-mounted
+    # fixture directory remains writable without running the image as root.
+    user: "${L402TEST_UID:-1000}:${L402TEST_GID:-1000}"
+    command:
+      - serve
+      - --listen
+      - 0.0.0.0:8080
+      - --config
+      - /config/premium.yaml
+      - --fixture-out
+      - /fixtures/fixture.json
+      - --format
+      - json
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./examples/premium.yaml:/config/premium.yaml:ro
+      - ./.fixtures:/fixtures

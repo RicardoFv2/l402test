@@ -1,0 +1,11 @@
+/dist/
+/coverage.out
+/l402test
+/l402test.exe
+/l402test.exe~
+/l402test.yaml
+/fixture.json
+*.fixture.json
+.l402test-*
+/.fixtures/
+/.hallmark/
