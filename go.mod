@@ -10,7 +10,7 @@ require (
 	github.com/lightningnetwork/lnd v0.18.5-beta
 	github.com/spf13/cobra v1.10.2
 	golang.org/x/term v0.45.0
-	gopkg.in/macaroon.v2 v2.0.0
+	gopkg.in/macaroon.v2 v2.1.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -39,8 +39,8 @@ require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jessevdk/go-flags v1.4.0 // indirect
 	github.com/jrick/logrotate v1.1.2 // indirect
-	github.com/juju/testing v1.2.1 // indirect
 	github.com/kkdai/bstream v1.0.0 // indirect
+	github.com/kr/pretty v0.3.1 // indirect
 	github.com/lightninglabs/gozmq v0.0.0-20191113021534-d20a764486bf // indirect
 	github.com/lightninglabs/neutrino v0.16.1-0.20240425105051-602843d34ffd // indirect
 	github.com/lightninglabs/neutrino/cache v1.1.2 // indirect
