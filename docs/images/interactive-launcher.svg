@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">l402test interactive theme picker</title>
+  <desc id="desc">Terminal capture of l402test's keyboard-first theme picker with a Tokyo Night preview.</desc>
+  <defs>
+    <linearGradient id="background" x1="92" y1="55" x2="1508" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101426"/>
+      <stop offset="1" stop-color="#080A13"/>
+    </linearGradient>
+    <linearGradient id="border" x1="78" y1="52" x2="1520" y2="928" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AA2F7" stop-opacity=".9"/>
+      <stop offset=".52" stop-color="#BB9AF7" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#73DACA" stop-opacity=".74"/>
+    </linearGradient>
+    <filter id="shadow" x="35" y="24" width="1530" height="932" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#01020A" flood-opacity=".75"/>
+    </filter>
+    <style>
+      .mono { font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace; }
+      .title { fill: #C0CAF5; font-size: 30px; font-weight: 700; }
+      .muted { fill: #7982A9; font-size: 19px; }
+      .item { fill: #A9B1D6; font-size: 23px; }
+      .selected { fill: #C0CAF5; font-size: 23px; font-weight: 700; }
+      .key { fill: #BB9AF7; font-size: 20px; }
+      .value { fill: #9ECE6A; font-size: 20px; }
+      .accent { fill: #73DACA; font-size: 20px; font-weight: 700; }
+      .eyebrow { fill: #7AA2F7; font-size: 16px; font-weight: 700; letter-spacing: 2.5px; }
+      .command { fill: #C0CAF5; font-size: 20px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" fill="#060810"/>
+  <circle cx="155" cy="118" r="250" fill="#BB9AF7" fill-opacity=".055"/>
+  <circle cx="1465" cy="850" r="310" fill="#73DACA" fill-opacity=".04"/>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="54" width="1448" height="872" rx="26" fill="url(#background)"/>
+    <rect x="76.75" y="54.75" width="1446.5" height="870.5" rx="25.25" fill="none" stroke="url(#border)" stroke-width="1.5"/>
+  </g>
+
+  <path d="M77 145H1523" stroke="#2B3150" stroke-width="1.5"/>
+  <circle cx="120" cy="100" r="8" fill="#F7768E"/>
+  <circle cx="148" cy="100" r="8" fill="#E0AF68"/>
+  <circle cx="176" cy="100" r="8" fill="#9ECE6A"/>
+  <text x="222" y="108" class="mono muted" font-size="19">l402test - interactive terminal UI</text>
+  <rect x="1280" y="78" width="195" height="43" rx="21.5" fill="#1D2A3C" stroke="#35506A"/>
+  <text x="1310" y="107" class="mono" fill="#73DACA" font-size="16" font-weight="700" letter-spacing="1.1">THEME PICKER</text>
+
+  <text x="122" y="213" class="mono title">Choose a terminal theme</text>
+  <text x="122" y="250" class="mono muted">Use Up / Down to preview - Enter to save - Esc to cancel</text>
+
+  <rect x="120" y="291" width="600" height="372" rx="16" fill="#0C1020" stroke="#27314E"/>
+  <text x="153" y="337" class="mono eyebrow">PALETTES</text>
+  <rect x="145" y="361" width="550" height="63" rx="10" fill="#1C2947" stroke="#4567A3"/>
+  <text x="169" y="401" class="mono accent">&gt;</text>
+  <rect x="203" y="377" width="46" height="30" rx="7" fill="#2A3A61"/>
+  <text x="217" y="398" class="mono" fill="#7AA2F7" font-size="17" font-weight="700">1</text>
+  <text x="273" y="401" class="mono selected">Tokyo Night</text>
+  <text x="464" y="401" class="mono muted">cool editor blue</text>
+  <text x="171" y="466" class="mono item">2. Dracula</text>
+  <text x="464" y="466" class="mono muted">violet contrast</text>
+  <text x="171" y="531" class="mono item">3. Catppuccin Mocha</text>
+  <text x="464" y="531" class="mono muted">warm pastel dark</text>
+  <text x="171" y="596" class="mono item">4. Nord</text>
+  <text x="464" y="596" class="mono muted">arctic blue-gray</text>
+
+  <text x="779" y="337" class="mono eyebrow">PREVIEW / TOKYO NIGHT</text>
+  <rect x="755" y="361" width="725" height="406" rx="16" fill="#0C1020" stroke="#27314E"/>
+  <text x="789" y="413" class="mono" fill="#7AA2F7" font-size="21" font-weight="700">l402test</text>
+  <text x="908" y="413" class="mono muted">local L402 HTTP playground</text>
+  <path d="M788 441H1447" stroke="#27314E"/>
+  <rect x="789" y="473" width="116" height="32" rx="16" fill="#11281F" stroke="#2D7157"/>
+  <circle cx="811" cy="489" r="5" fill="#9ECE6A"/>
+  <text x="826" y="495" class="mono" fill="#9ECE6A" font-size="16" font-weight="700">READY</text>
+  <text x="789" y="550" class="mono key">address</text>
+  <text x="926" y="550" class="mono value">http://127.0.0.1:53142</text>
+  <text x="789" y="590" class="mono key">scenario</text>
+  <text x="926" y="590" class="mono value">happy</text>
+  <text x="789" y="630" class="mono key">fixture</text>
+  <text x="926" y="630" class="mono value">.fixtures/fixture.json</text>
+  <path d="M788 665H1447" stroke="#27314E"/>
+  <text x="789" y="718" class="mono accent">$</text>
+  <text x="816" y="718" class="mono command">curl -i http://127.0.0.1:53142/v1/weather</text>
+
+  <path d="M122 813H1478" stroke="#27314E" stroke-width="1.5"/>
+  <text x="122" y="857" class="mono muted">Keyboard-first for people; explicit Cobra commands remain available for agents and CI.</text>
+  <text x="122" y="895" class="mono" fill="#73DACA" font-size="18" font-weight="700">Up / Down</text>
+  <text x="258" y="895" class="mono muted">navigate</text>
+  <text x="417" y="895" class="mono" fill="#73DACA" font-size="18" font-weight="700">Enter</text>
+  <text x="482" y="895" class="mono muted">select</text>
+  <text x="600" y="895" class="mono" fill="#73DACA" font-size="18" font-weight="700">Esc</text>
+  <text x="650" y="895" class="mono muted">exit</text>
+</svg>
