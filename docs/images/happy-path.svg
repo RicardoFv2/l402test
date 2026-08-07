@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">l402test local L402 happy path</title>
+  <desc id="desc">Terminal capture showing the l402test readiness output, a 402 L402 challenge, and a successful authorized retry.</desc>
+  <defs>
+    <linearGradient id="background" x1="100" y1="60" x2="1500" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101426"/>
+      <stop offset="1" stop-color="#080A13"/>
+    </linearGradient>
+    <linearGradient id="border" x1="84" y1="52" x2="1516" y2="928" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AA2F7" stop-opacity=".9"/>
+      <stop offset=".55" stop-color="#BB9AF7" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#73DACA" stop-opacity=".75"/>
+    </linearGradient>
+    <filter id="shadow" x="35" y="24" width="1530" height="932" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#01020A" flood-opacity=".75"/>
+    </filter>
+    <style>
+      .mono { font-family: "Cascadia Code", "JetBrains Mono", Consolas, monospace; }
+      .eyebrow { fill: #7AA2F7; font-size: 17px; font-weight: 700; letter-spacing: 2.7px; }
+      .muted { fill: #7982A9; font-size: 20px; }
+      .command { fill: #C0CAF5; font-size: 23px; }
+      .prompt { fill: #73DACA; font-size: 23px; font-weight: 700; }
+      .output { fill: #A9B1D6; font-size: 21px; }
+      .key { fill: #BB9AF7; font-size: 21px; }
+      .value { fill: #9ECE6A; font-size: 21px; }
+      .warning { fill: #E0AF68; font-size: 22px; font-weight: 700; }
+      .success { fill: #9ECE6A; font-size: 23px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" fill="#060810"/>
+  <circle cx="150" cy="110" r="255" fill="#7AA2F7" fill-opacity=".06"/>
+  <circle cx="1475" cy="860" r="320" fill="#73DACA" fill-opacity=".045"/>
+
+  <g filter="url(#shadow)">
+    <rect x="76" y="54" width="1448" height="872" rx="26" fill="url(#background)"/>
+    <rect x="76.75" y="54.75" width="1446.5" height="870.5" rx="25.25" fill="none" stroke="url(#border)" stroke-width="1.5"/>
+  </g>
+
+  <path d="M77 145H1523" stroke="#2B3150" stroke-width="1.5"/>
+  <circle cx="120" cy="100" r="8" fill="#F7768E"/>
+  <circle cx="148" cy="100" r="8" fill="#E0AF68"/>
+  <circle cx="176" cy="100" r="8" fill="#9ECE6A"/>
+  <text x="222" y="108" class="mono muted" font-size="19">l402test - local protocol harness</text>
+  <rect x="1270" y="78" width="205" height="43" rx="21.5" fill="#1D2A3C" stroke="#35506A"/>
+  <circle cx="1297" cy="99.5" r="5.5" fill="#73DACA"/>
+  <text x="1314" y="107" class="mono" fill="#73DACA" font-size="16" font-weight="700" letter-spacing="1.1">HAPPY / READY</text>
+
+  <text x="122" y="204" class="mono eyebrow">01 / START LOCAL PLAYGROUND</text>
+  <text x="122" y="251" class="mono prompt">$</text>
+  <text x="151" y="251" class="mono command">l402test serve --config examples/premium.yaml --scenario happy \</text>
+  <text x="151" y="286" class="mono command">  --fixture-out fixture.json --format json</text>
+  <rect x="120" y="316" width="1360" height="57" rx="9" fill="#131A2E" stroke="#27314E"/>
+  <text x="142" y="351" class="mono key">{&quot;event&quot;:</text>
+  <text x="246" y="351" class="mono value">&quot;ready&quot;</text>
+  <text x="338" y="351" class="mono key">,&quot;base_url&quot;:</text>
+  <text x="489" y="351" class="mono value">&quot;http://127.0.0.1:53142&quot;</text>
+  <text x="779" y="351" class="mono key">,&quot;scenario&quot;:</text>
+  <text x="928" y="351" class="mono value">&quot;happy&quot;</text>
+  <text x="1014" y="351" class="mono key">,&quot;fixture_file&quot;:</text>
+  <text x="1206" y="351" class="mono value">&quot;fixture.json&quot;</text>
+  <text x="1404" y="351" class="mono key">}</text>
+
+  <path d="M122 418H1478" stroke="#27314E" stroke-width="1.5"/>
+  <text x="122" y="461" class="mono eyebrow">02 / ASSERT THE PAID BOUNDARY</text>
+  <text x="122" y="507" class="mono prompt">$</text>
+  <text x="151" y="507" class="mono command">curl -i http://127.0.0.1:53142/v1/weather</text>
+  <text x="122" y="548" class="mono warning">HTTP/1.1 402 Payment Required</text>
+  <text x="122" y="584" class="mono output">WWW-Authenticate: L402 macaroon=&quot;AgEIbDQwMnRlc3Q...&quot;, invoice=&quot;lnbcrt210n...&quot;</text>
+  <text x="122" y="619" class="mono output">{&quot;error&quot;:&quot;L402 credential required&quot;}</text>
+
+  <path d="M122 671H1478" stroke="#27314E" stroke-width="1.5"/>
+  <text x="122" y="714" class="mono eyebrow">03 / RETRY WITH THE TEST FIXTURE</text>
+  <text x="122" y="760" class="mono prompt">$</text>
+  <text x="151" y="760" class="mono command">go run ./examples/client --base-url http://127.0.0.1:53142 --fixture fixture.json</text>
+  <rect x="120" y="790" width="1360" height="67" rx="10" fill="#11281F" stroke="#2D7157"/>
+  <circle cx="149" cy="823" r="7" fill="#9ECE6A"/>
+  <text x="172" y="831" class="mono success">200 OK</text>
+  <text x="311" y="831" class="mono key">{&quot;forecast&quot;:</text>
+  <text x="463" y="831" class="mono value">&quot;clear&quot;</text>
+  <text x="565" y="831" class="mono key">}</text>
+
+  <text x="122" y="895" class="mono muted" font-size="17" letter-spacing="1.05">NO WALLET / NO LIGHTNING NODE / NO REAL FUNDS / LOCALHOST ONLY</text>
+</svg>

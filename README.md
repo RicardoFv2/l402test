@@ -19,6 +19,25 @@ fixtures; they are deliberately not payable.
 The HTTP contract follows the [L402 protocol specification](https://docs.lightning.engineering/the-lightning-network/l402/protocol-specification): a server challenges with an invoice and macaroon, and the client presents the macaroon plus hexadecimal preimage as its authorization credential.
 For agent-oriented client behavior, see the upstream [L402 agent specification](https://github.com/lightninglabs/L402/blob/master/agent-spec.md).
 
+## Screenshots
+
+### Local L402 happy path
+
+![l402test terminal showing readiness output, an L402 402 challenge, and an authorized retry that returns a premium response.](docs/images/happy-path.svg)
+
+The server exposes the actual HTTP boundary a client needs to exercise:
+unauthenticated request, `WWW-Authenticate` challenge, and a retry
+using a test-only fixture. Credentials are deliberately shortened in the
+capture.
+
+### Keyboard-first launcher
+
+![l402test terminal theme picker showing the Tokyo Night palette and a local server preview.](docs/images/interactive-launcher.svg)
+
+In a real terminal, the launcher and palette picker support `Up`/`Down`,
+`Enter`, and `Esc`. Scripts, agents, and CI use the explicit
+Cobra commands instead, so their output remains stable and machine-readable.
+
 ## The job it does
 
 ### Who it is for
