@@ -26,7 +26,7 @@ For agent-oriented client behavior, see the upstream [L402 agent specification](
 ![l402test terminal showing readiness output, an L402 402 challenge, and an authorized retry that returns a premium response.](docs/images/happy-path.svg)
 
 The server exposes the actual HTTP boundary a client needs to exercise:
-unauthenticated request, <code>WWW-Authenticate</code> challenge, and a retry
+unauthenticated request, `WWW-Authenticate` challenge, and a retry
 using a test-only fixture. Credentials are deliberately shortened in the
 capture.
 
@@ -34,8 +34,8 @@ capture.
 
 ![l402test terminal theme picker showing the Tokyo Night palette and a local server preview.](docs/images/interactive-launcher.svg)
 
-In a real terminal, the launcher and palette picker support <code>Up</code>/<code>Down</code>,
-<code>Enter</code>, and <code>Esc</code>. Scripts, agents, and CI use the explicit
+In a real terminal, the launcher and palette picker support `Up`/`Down`,
+`Enter`, and `Esc`. Scripts, agents, and CI use the explicit
 Cobra commands instead, so their output remains stable and machine-readable.
 
 ## The job it does
