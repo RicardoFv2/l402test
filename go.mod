@@ -1,15 +1,13 @@
 module github.com/RicardoFv2/l402test
 
-go 1.25.0
-
-toolchain go1.25.12
+go 1.26.0
 
 require (
 	github.com/btcsuite/btcd v0.24.3-0.20240921052913-67b8efd3ba53
 	github.com/btcsuite/btcd/btcec/v2 v2.3.4
 	github.com/lightningnetwork/lnd v0.18.5-beta
 	github.com/spf13/cobra v1.10.2
-	golang.org/x/term v0.45.0
+	golang.org/x/term v0.46.0
 	gopkg.in/macaroon.v2 v2.0.0
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -61,5 +59,5 @@ require (
 	golang.org/x/exp v0.0.0-20240325151524-a685a6edb6d8 // indirect
 	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
-	golang.org/x/sys v0.47.0 // indirect
+	golang.org/x/sys v0.48.0 // indirect
 )
